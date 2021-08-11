@@ -18,7 +18,7 @@ const init = async () => {
 
     await server.register({
         plugin: songs,
-        option: {
+        options: {
             service: songsService,
             validator: SongsValidator,
         },
