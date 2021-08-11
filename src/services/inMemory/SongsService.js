@@ -13,7 +13,7 @@ class SongsService {
         const updatedAt = insertedAt;
 
         const newSong = {
-            id, title, performer
+            id, title, year, performer, genre, duration, insertedAt, updatedAt,
         };
 
         this._songs.push(newSong);
