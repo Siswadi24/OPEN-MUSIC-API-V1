@@ -106,9 +106,9 @@ class SongsHandler {
     putSongByIdHandler(request, h) {
         try {
             this._validator.validateSongPayload(request.payload);
-            const { songId } = request.params;
+            const { songId, id, title, year, performer, genre, duration } = request.params;
 
-            this._service.editSongById(songId, { title, year, performer, genre, duration });
+            this._service.editSongById(songId, { id, title, year, performer, genre, duration });
 
             return {
                 status: 'success',
