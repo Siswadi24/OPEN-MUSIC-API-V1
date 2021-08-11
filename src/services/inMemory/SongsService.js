@@ -13,7 +13,14 @@ class SongsService {
         const updatedAt = insertedAt;
 
         const newSong = {
-            id, title, year: +year, performer, genre, duration: +duration, insertedAt, updatedAt,
+            id,
+            title,
+            year: +year,
+            performer,
+            genre,
+            duration: +duration,
+            insertedAt,
+            updatedAt,
         };
 
         this._songs.push(newSong);
@@ -28,7 +35,7 @@ class SongsService {
     }
 
     getSongs() {
-        return this._songs;
+        return this._songs.map(({ id, title, performer }) => ({ id, title, performer }));
     }
 
     getSongById(id) {
