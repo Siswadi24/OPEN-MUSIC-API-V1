@@ -46,7 +46,7 @@ class SongsService {
         return song;
     }
 
-    editSongById(songId, { id, title, year, performer, genre, duration }) {
+    editSongById(id, { title, year, performer, genre, duration }) {
         const index = this._songs.findIndex((song) => song.id === id);
 
         if (index === -1) {
